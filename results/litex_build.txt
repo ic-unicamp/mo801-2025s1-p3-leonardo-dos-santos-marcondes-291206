@@ -1,0 +1,3 @@
+🖼️ Build Simplificado LiteX - Sobel Accelerator
+=============================================
+✅ Build mock concluído com sucesso!

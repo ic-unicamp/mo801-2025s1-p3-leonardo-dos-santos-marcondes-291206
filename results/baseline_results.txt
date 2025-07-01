@@ -1,0 +1,74 @@
+🖼️ Projeto 3 - Filtro Sobel (Baseline)
+=====================================
+
+
+=== Análise de Complexidade ===
+Imagem: 32x32 pixels
+Área processada: 30x30 = 900 pixels
+Operações por pixel: 6 multiplicações + 5 somas
+Total de operações: 5400 multiplicações + 4500 somas
+Paralelismo disponível: 6 multiplicações simultâneas
+
+=== Validação do Filtro Sobel ===
+Imagem 1 (Quadrado Central):
+  Pixels com borda: 56/900
+  Valor máximo: 255
+  ✓ Bordas detectadas corretamente
+Imagem 2 (Gradiente Diagonal):
+  Pixels com borda: 114/900
+  Valor máximo: 255
+Imagem 3 (Círculo):
+  Pixels com borda: 118/900
+  Valor máximo: 255
+Imagem 4 (Padrão Xadrez):
+  Pixels com borda: 420/900
+  Valor máximo: 255
+
+=== Benchmark do Filtro Sobel ===
+Executando 10000 iterações por imagem...
+Imagem 1 (Quadrado Central): 974 ns/imagem
+Imagem 2 (Gradiente Diagonal): 1039 ns/imagem
+Imagem 3 (Círculo): 970 ns/imagem
+Imagem 4 (Padrão Xadrez): 967 ns/imagem
+
+Resultados Consolidados:
+  Tempo médio por imagem: 987 ns
+  Tempo por pixel: 1 ns
+  Throughput: 1000.00 Mpixels/s
+Anti-otimização checksum: -29520
+
+=== Análise de Otimizações ===
+Compile com diferentes flags para comparar:
+  -O0: Sem otimização
+  -O1: Otimização básica
+  -O2: Otimização padrão
+  -O3: Máxima otimização
+  -Ofast: Otimização agressiva
+
+Informações do compilador:
+  GCC versão: 11.4.0
+  Otimização: Ativada
+
+=== Estimativa de Speedup Hardware ===
+Análise teórica:
+  Multiplicações por pixel: 6
+  Pixels processados: 900
+  Total de multiplicações: 5400
+
+Software (sequencial):
+  Tempo por multiplicação: ~2-5ns
+  Tempo total estimado: 10800-27000ns
+
+Hardware (paralelo):
+  Pipeline de 3 ciclos @ 50MHz
+  Tempo por imagem: ~60ns
+  Speedup esperado: 10-50x
+
+Considerações para implementação:
+  - Pipeline permite processamento de 1 pixel/ciclo
+  - Paralelização de 6 multiplicadores por pixel
+  - Buffer interno para janela 3x3 deslizante
+  - Interface DMA para transferência eficiente
+
+✅ Benchmark baseline concluído!
+Próximo passo: implementar acelerador em hardware

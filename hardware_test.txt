@@ -1,0 +1,1 @@
+./run_projeto3.sh: line 51: ./obj_dir/Vsobel_compute_tb_simple: No such file or directory

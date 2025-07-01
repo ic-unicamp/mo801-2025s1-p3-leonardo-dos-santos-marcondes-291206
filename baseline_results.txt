@@ -1,0 +1,1 @@
+./run_projeto3.sh: line 40: ./sobel_test_release: No such file or directory

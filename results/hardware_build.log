@@ -1,0 +1,40 @@
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:83:19: Unsupported: timing control statement in this location
+                                                    : ... Suggest have one timing control statement per procedure, at the top of the procedure
+   83 |         repeat(5) @(posedge clk);
+      |                   ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:88:19: Unsupported: timing control statement in this location
+                                                    : ... Suggest have one timing control statement per procedure, at the top of the procedure
+   88 |         repeat(2) @(posedge clk);
+      |                   ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:98:9: Unsupported: timing control statement in this location
+                                                   : ... Suggest have one timing control statement per procedure, at the top of the procedure
+   98 |         @(posedge clk);
+      |         ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:103:9: Unsupported: timing control statement in this location
+                                                    : ... Suggest have one timing control statement per procedure, at the top of the procedure
+  103 |         @(posedge clk);
+      |         ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:113:19: Unsupported: timing control statement in this location
+                                                     : ... Suggest have one timing control statement per procedure, at the top of the procedure
+  113 |         repeat(3) @(posedge clk);
+      |                   ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:123:9: Unsupported: timing control statement in this location
+                                                    : ... Suggest have one timing control statement per procedure, at the top of the procedure
+  123 |         @(posedge clk);
+      |         ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:128:9: Unsupported: timing control statement in this location
+                                                    : ... Suggest have one timing control statement per procedure, at the top of the procedure
+  128 |         @(posedge clk);
+      |         ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:138:19: Unsupported: timing control statement in this location
+                                                     : ... Suggest have one timing control statement per procedure, at the top of the procedure
+  138 |         repeat(5) @(posedge clk);
+      |                   ^
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:102:9: Unsupported: wait statements
+  102 |         wait(valid_out);
+      |         ^~~~
+%Error-UNSUPPORTED: sobel_compute_tb_simple.sv:127:9: Unsupported: wait statements
+  127 |         wait(valid_out);
+      |         ^~~~
+%Error: Exiting due to 10 error(s)
+        ... See the manual and https://verilator.org for more assistance.
