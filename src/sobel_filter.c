@@ -1,8 +1,3 @@
-/*
- * Projeto 3 - Filtro Sobel para Detecção de Bordas
- * Implementação baseline (software)
- */
-
 #include <stdio.h>
 #include <stdint.h>
 #include <math.h>
@@ -49,10 +44,7 @@ void sobel_filter(const uint8_t input[IMAGE_SIZE][IMAGE_SIZE],
     }
 }
 
-/**
- * Versão otimizada para benchmark (sem magnitude)
- * Foca apenas no gradiente X para maximizar throughput
- */
+
 void sobel_filter_fast(const uint8_t input[IMAGE_SIZE][IMAGE_SIZE], 
                        int16_t output[IMAGE_SIZE-2][IMAGE_SIZE-2]) {
     

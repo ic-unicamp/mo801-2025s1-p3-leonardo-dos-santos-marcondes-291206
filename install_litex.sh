@@ -228,13 +228,3 @@ if python3 -c "import migen" 2>/dev/null; then
 else
     echo "❌ Migen: Falhou"
 fi
-
-echo ""
-echo "🎯 PRÓXIMOS PASSOS:"
-echo "1. Se tudo está ✅, execute: ./run_projeto3.sh"
-echo "2. Se algo falhou ❌, siga as instruções acima"
-echo "3. Reinicie o terminal se mudou o PATH"
-echo ""
-echo "Para mais ajuda:"
-echo "- LiteX docs: https://github.com/enjoy-digital/litex"
-echo "- LiteX wiki: https://github.com/enjoy-digital/litex/wiki"

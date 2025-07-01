@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🖼️ PROJETO 3 - SOBEL ACCELERATOR (CORRIGIDO)"
+echo "🖼️ PROJETO 3 - SOBEL ACCELERATOR "
 echo "=============================================="
 echo ""
 
@@ -197,7 +197,7 @@ fi
 
 echo ""
 
-# Passo 4: Executar simulação LiteX (se possível)
+# Passo 4: Executar simulação LiteX 
 echo "🔧 PASSO 4: Simulação LiteX"
 echo "============================"
 
@@ -293,14 +293,6 @@ else
     echo "- ❌ SoC LiteX falhou" >> results/relatorio_projeto3.md
 fi
 
-echo "" >> results/relatorio_projeto3.md
-echo "### Próximos Passos:" >> results/relatorio_projeto3.md
-echo "1. Executar simulação LiteX manualmente" >> results/relatorio_projeto3.md
-echo "2. Medir performance com comandos do BIOS" >> results/relatorio_projeto3.md
-echo "3. Finalizar relatório com resultados" >> results/relatorio_projeto3.md
-
-echo "✅ Relatório base gerado: results/relatorio_projeto3.md"
-echo ""
 
 # Resumo final
 echo "📊 RESUMO FINAL"
@@ -334,19 +326,3 @@ if [ -f "sobel_test/litex_sobel/build/software/bios/bios.bin" ]; then
 else
     echo "  ❌ SoC LiteX falhou"
 fi
-
-echo ""
-echo "🎯 PRÓXIMOS PASSOS:"
-echo "1. Verifique os logs em results/ para diagnosticar problemas"
-echo "2. Execute a simulação LiteX manualmente se BIOS foi gerado"
-echo "3. Complete o relatório com medições de performance"
-echo ""
-echo "Para simulação manual:"
-echo "  cd sobel_test/litex_sobel/build"
-echo "  litex_sim --rom-init=software/bios/bios.bin"
-echo ""
-echo "Para ver resultados:"
-echo "  cat results/baseline_results.txt"
-echo "  cat results/hardware_test.txt"
-echo "  cat results/litex_build.txt"
-echo ""

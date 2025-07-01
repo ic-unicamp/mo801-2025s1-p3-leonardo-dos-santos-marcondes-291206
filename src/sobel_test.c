@@ -1,8 +1,3 @@
-/*
- * Projeto 3 - Benchmark do Filtro Sobel
- * Sistema de medição e análise de performance
- */
-
 #define _POSIX_C_SOURCE 199309L  // Para clock_gettime
 
 #include <stdio.h>
@@ -187,7 +182,6 @@ int main(void) {
     estimate_speedup();
     
     printf("\n✅ Benchmark baseline concluído!\n");
-    printf("Próximo passo: implementar acelerador em hardware\n");
     
     return 0;
 }
